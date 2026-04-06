@@ -1,0 +1,33 @@
+services:
+  dbt_tv1:
+    image: ghcr.io/dbt-labs/dbt-postgres:latest
+    working_dir: /usr/app
+    env_file:
+      - ../.env                  
+    environment:
+      PYTHONPATH: /usr/app
+      ENV_MODE: docker
+      SERVICE_NAME: dbt_tv1
+    volumes:
+      - ./:/usr/app                 
+    networks:
+      - data_network           
+    
+  dbt_run:
+    extends:
+      service: dbt_tv1
+    command: ["run"]
+
+  dbt_test:
+    extends:
+      service: dbt_tv1
+    command: ["test"]
+
+  dbt_build:
+    extends:
+      service: dbt_tv1
+    command: ["build"]
+
+networks:
+  data_network:
+    external: true
