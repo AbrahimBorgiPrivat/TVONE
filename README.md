@@ -1,5 +1,7 @@
 # TVONE
 
+[GitHub Pages](https://abrahimborgiprivat.github.io/TVONE/html/index.html)
+
 TVONE er et komplet streaming analytics-projekt med fokus på metadata, simuleret brugeradfærd, ETL, datamodellering og Power BI-rapportering.
 
 Projektet samler hele flowet fra kildedata til rapport i ét repo:
