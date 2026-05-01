@@ -1,16 +1,16 @@
 /// {
 /// ("Sessioner", NAMEOF('_MEASURES'[SESSIONS]), 0),
-///     ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
-///     ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
-///     ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
-///     ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
-///     ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
-///     ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
-///     ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
-///     ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
-///     ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
-///     ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
-///     ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
+/// ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
+/// ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
+/// ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
+/// ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
+/// ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
+/// ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
+/// ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
+/// ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
+/// ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
+/// ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
+/// ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
 /// }
 table '_PARAMETER - MEASURES'
 	lineageTag: 23141177-80ea-45f4-8b20-d00f0d87a6aa
@@ -31,7 +31,11 @@ table '_PARAMETER - MEASURES'
 		sourceColumn: [Value2]
 		sortByColumn: Order
 
-		extendedProperty ParameterMetadata = {"version":3,"kind":2}
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
 
 	column Order
 		dataType: int64

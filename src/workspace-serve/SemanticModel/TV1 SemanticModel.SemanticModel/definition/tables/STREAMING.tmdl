@@ -95,12 +95,10 @@ table STREAMING
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    Kilde = PostgreSQL.Database("localhost:54320", "tv_one_db"),
 				    tv_one_episodes_streamed_view = Kilde{[Schema="tv_one",Item="episodes_streamed_view"]}[Data]
 				in
 				    tv_one_episodes_streamed_view
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

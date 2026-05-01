@@ -46,12 +46,10 @@ table SEGMENTATIONS
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    Kilde = PostgreSQL.Database("localhost:54320", "tv_one_db"),
 				    tv_one_segmentation_view = Kilde{[Schema="tv_one",Item="segmentation_view"]}[Data]
 				in
 				    tv_one_segmentation_view
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

@@ -398,12 +398,10 @@ table DATEVIEW
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    Kilde = PostgreSQL.Database("localhost:54320", "tv_one_db"),
 				    default_data_date_view = Kilde{[Schema="default_data",Item="date_view"]}[Data]
 				in
 				    default_data_date_view
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

@@ -111,8 +111,8 @@
         },
         {
           "location": {
-            "x": 1371.5402981708455,
-            "y": 289.24687682864675
+            "x": 1594.0402981708455,
+            "y": 0
           },
           "nodeIndex": "_MEASURES",
           "nodeLineageTag": "e6d63244-f352-4117-867b-65c24970d5af",
@@ -124,11 +124,11 @@
         },
         {
           "location": {
-            "x": 1370.6282170303487,
-            "y": 509.57613710779049
+            "x": 1603.1282170303487,
+            "y": 212.07613710779049
           },
           "nodeIndex": "_PARAMETER - MEASURES",
-          "nodeLineageTag": "bb208275-99fb-4cc4-8339-656dca5e870e",
+          "nodeLineageTag": "23141177-80ea-45f4-8b20-d00f0d87a6aa",
           "size": {
             "height": 152,
             "width": 234
@@ -137,7 +137,7 @@
         }
       ],
       "name": "Alle tabeller",
-      "zoomValue": 89.1925905205695,
+      "zoomValue": 40,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

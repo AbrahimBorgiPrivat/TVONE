@@ -108,7 +108,7 @@ table SESSIONS
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    Kilde = PostgreSQL.Database("localhost:54320", "tv_one_db"),
 				    tv_one_sessions_view = Kilde{[Schema="tv_one",Item="sessions_view"]}[Data]
 				in
 				    tv_one_sessions_view
