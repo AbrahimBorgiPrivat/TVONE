@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TVONE | Datamodel</title>
+  <meta name="description" content="Datamodel og simulerede entiteter for TVONE-projektet." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/tvone-logo.svg" alt="TVONE logo" />
+        <div>
+          <div class="brand-title">TVONE</div>
+          <div class="brand-subtitle">Streaming analytics</div>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">CIRCLE K</a>
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link active" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./technology-repository.html">Repository</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Datamodel</div>
+          <p class="lead">En forenklet streamingmodel med både indhold, brugere, segmenter og sessionsdata.</p>
+          <p>
+            Datamodellen er tænkt som et overskueligt billede af et streamingunivers. Den samler metadata om indhold
+            med simulerede brugere og aktiviteter, så rapporten både kan sige noget om udbud og faktisk brug.
+          </p>
+
+          <ul>
+            <li><strong>PROGRAMS, SEASONS, EPISODES:</strong> beskriver indholdets struktur og relationer.</li>
+            <li><strong>SEGMENTATIONS, USERS:</strong> repræsenterer målgrupper og adfærdsprofiler.</li>
+            <li><strong>STREAMING, SESSIONS:</strong> danner grundlaget for analyse af aktivitet, platforme og engagement.</li>
+            <li><strong>DATEVIEW:</strong> fungerer som datodimension til tidsbaseret analyse.</li>
+          </ul>
+
+          <div class="inline-image">
+            <img src="../assets/semanticmodel.png" alt="TVONE semantic model" />
+            <p>Udsnit af den semantiske model og centrale relationer.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TVONE | Pipeline</title>
+  <meta name="description" content="Pipeline og ETL-flow for TVONE-projektet." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/tvone-logo.svg" alt="TVONE logo" />
+        <div>
+          <div class="brand-title">TVONE</div>
+          <div class="brand-subtitle">Streaming analytics</div>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">CIRCLE K</a>
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link active" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./technology-repository.html">Repository</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Pipeline</div>
+          <p class="lead">JSON-metadata og simulationer løftes ind i PostgreSQL, formes i dbt og vises i Power BI.</p>
+          <p>
+            TVONE er bygget som en enkel, men tydelig ETL-struktur. Formålet er at gøre flowet let at følge:
+            først indhold og simuleret aktivitet, derefter database og modellering, og til sidst semantic layer og rapport.
+          </p>
+
+          <ul>
+            <li><strong>Extract:</strong> JSON-filer med programmer, sæsoner, episoder og segmentering samt Python-baserede simulationer.</li>
+            <li><strong>Load:</strong> services indlæser data i PostgreSQL og opretter de nødvendige tabeller og views.</li>
+            <li><strong>Transform:</strong> dbt bygger staging- og marts-lag til rapportering.</li>
+            <li><strong>Serve:</strong> den semantiske model og Power BI læser de transformerede tabeller.</li>
+          </ul>
+
+          <div class="inline-image">
+            <img src="../assets/etl.png" alt="TVONE ETL pipeline" />
+            <p>ETL-overblik for TVONE-casen.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

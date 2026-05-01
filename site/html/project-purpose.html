@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TVONE | Formål</title>
+  <meta name="description" content="Formål og case-retning for TVONE-projektet." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/tvone-logo.svg" alt="TVONE logo" />
+        <div>
+          <div class="brand-title">TVONE</div>
+          <div class="brand-subtitle">Streaming analytics</div>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">CIRCLE K</a>
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link active" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./technology-repository.html">Repository</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Formål</div>
+          <p class="lead">En TV-case bygget til at vise både data engineering og forretningsvendt rapportering.</p>
+          <p>
+            Formålet med TVONE er at samle indholdsdata, simuleret brugeradfærd og rapportering i en enkel,
+            genkørbar case, der viser hele vejen fra rå input til færdigt dashboard.
+          </p>
+
+          <ul>
+            <li>Bygge en troværdig streaming-case uden adgang til produktionsdata.</li>
+            <li>Skabe en pipeline, der kan indlæse metadata, simulere aktivitet og modellere data til rapportbrug.</li>
+            <li>Formidle brugeradfærd, platformsmønstre og indholdsperformance i et overskueligt Power BI-produkt.</li>
+          </ul>
+
+          <div class="section-header">
+            <h2>I korte træk</h2>
+          </div>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Case</div>
+              <h3>Analysegrundlag</h3>
+              <p>Metadata, segmentering, simulerede brugere og streamingevents.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Spørgsmål</div>
+              <h3>Forretningsfokus</h3>
+              <p>Hvad bliver set, på hvilke platforme, og hvordan udvikler aktiviteten sig over tid?</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Leverance</div>
+              <h3>End-to-end</h3>
+              <p>Services, model, semantic layer og rapport i samme repo.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

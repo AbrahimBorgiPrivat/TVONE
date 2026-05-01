@@ -1,58 +1,99 @@
 # TVONE
 
-TVONE is a standalone extraction of the TV1 slice from `DATA PROJECTS`.
+TVONE er et komplet streaming analytics-projekt med fokus på metadata, simuleret brugeradfærd, ETL, datamodellering og Power BI-rapportering.
 
-The repository contains the TV-specific resources, runtime definitions, ETL services, dbt project, semantic model, Tabular assets, and the shared Python code needed to run them without the old nested `tv1/` layout.
+Projektet samler hele flowet fra kildedata til rapport i ét repo:
 
-![TVONE overview](res/pbi/OVERVIEW-Page.png)
+- JSON-baserede metadata for programmer, sæsoner, episoder og segmentering
+- Python-services til data load, SQL-oprettelse og simulationer
+- PostgreSQL som datalager
+- dbt til staging- og marts-modeller
+- semantisk model og Power BI-rapportering
+- dokumentation, billeder og GitHub Pages-site
 
-## What is included
+![TVONE overview](res/rapport/img/OVERVIEW-Page.png)
 
-- JSON source files for programs, seasons, episodes, and segmentation
-- simulation code for users and streaming tracking
-- ETL services for JSON load, SQL table/view creation, and simulations
-- dbt models for staging and marts
-- PBIP semantic model and Tabular Editor scripts
+## Formål
 
-## Project structure
+TVONE er bygget som en case, der viser hvordan et streamingdomæne kan modelleres og rapporteres uden adgang til produktionsdata. Løsningen kombinerer indholdsmetadata med simulerede brugere og streaminghændelser, så rapporten kan analysere aktivitet, platformsmønstre og programperformance.
+
+## Hvad projektet indeholder
+
+- `res/json/`
+  rå metadatafiler for programmer, sæsoner, episoder og segmentering
+- `src/code/runtime_definitions/`
+  runtime-filer til load, SQL-jobs og simulationer
+- `src/code/service/etl/`
+  ETL-services til JSON-load, oprettelse af tabeller/views og simulationer
+- `src/code/service/dbt/`
+  dbt-projekt med staging- og marts-lag
+- `src/workspace-serve/SemanticModel/`
+  semantisk model og rapportgrundlag
+- `site/`
+  statisk GitHub Pages-site for præsentation af casen
+- `docs/`
+  dokumentation og Word/PDF-præsentation
+
+## Projektstruktur
 
 ```text
 TVONE/
+|-- .github/
 |-- docs/
 |-- res/
 |   |-- json/
-|   `-- pbi/
+|   `-- rapport/
+|       `-- img/
+|-- site/
+|   |-- assets/
+|   |-- css/
+|   `-- html/
 |-- src/
 |   |-- code/
 |   |   |-- libraries/
 |   |   |-- runtime_definitions/
 |   |   `-- service/
+|   |       |-- dbt/
+|   |       `-- etl/
 |   `-- workspace-serve/
 `-- README.md
 ```
 
-## Key paths
+## Centrale stier
 
-- `src/code/runtime_definitions/` holds runtime JSON files for each load step
-- `src/code/service/etl/` contains the Dockerized ETL services
-- `src/code/service/dbt/` contains the dbt project used for staging and marts
-- `src/workspace-serve/SemanticModel/` contains the Power BI project and semantic model
-- `src/workspace-serve/Tabular/` contains Tabular Editor scripts and DAX assets
+- `src/code/runtime_definitions/json_to_client/`
+  runtime-filer til indlæsning af JSON-metadata
+- `src/code/runtime_definitions/create_table_and_views/`
+  runtime-filer og SQL til schema, tabeller og views
+- `src/code/runtime_definitions/simulations/`
+  runtime-filer til generering af brugere og tracking
+- `src/code/service/etl/`
+  de kørbare ETL-services
+- `src/code/service/dbt/models/`
+  staging-, marts- og view-modeller til rapportlaget
+- `src/workspace-serve/SemanticModel/`
+  semantisk model med tabeller, relationer og measures
 
-## Typical flow
+## Overordnet flow
 
-1. Load metadata JSON files into PostgreSQL via `service_json_to_client`
-2. Create tables and supporting views via `service_create_table_views_from_sql`
-3. Generate simulated users and tracking rows via `service_simulations`
-4. Build staging and marts with dbt
-5. Refresh the semantic model and Tabular assets
+1. Metadata for programmer, sæsoner, episoder og segmentering indlæses i PostgreSQL.
+2. SQL-services opretter schema, tabeller og understøttende views.
+3. Python-simulationer genererer brugere og streaminghændelser.
+4. dbt bygger staging- og marts-lag oven på de indlæste data.
+5. Den semantiske model og Power BI-rapporten læser de transformerede tabeller.
 
-## Notes
+## Rapportering
 
-- Paths have been flattened for the standalone repo, so references now point to local folders such as `res/json` and `src/code/runtime_definitions/...`
-- Database and schema targets remain aligned with the original TV1 setup
+Rapportdelen er i denne case bygget som én samlet overview-side. Den viser blandt andet:
 
-## Documentation
+- stream-minutter, sessioner og aktive brugere
+- fordeling på platforme som TV, Mobile og Tablet
+- udvikling over tid
+- mest sete programmer
+- filtrering på målinger, kategori, program og periode
 
-- [Documentation overview](docs/README.md)
-- [Tabular automation notes](src/workspace-serve/Tabular/README.md)
+## Dokumentation
+
+- [Dokumentationsoversigt](docs/README.md)
+- [Word-præsentation](docs/Abrahim_Borgi_TVONE_Simulation_Project.docx)
+- [GitHub Pages-site](site/html/index.html)
